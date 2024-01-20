@@ -53,12 +53,31 @@ Adding two non-integers or non-floats
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
+Adding a list and a numnber
+	>>> add_integer(246, [])
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Adding a tuple
+	>>> add_integer((1, 1))
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Adding only one string
+	>>> add_integer("School")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
 Adding infinity
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
 	>>> add_integer(3, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('inf'), float('-inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 

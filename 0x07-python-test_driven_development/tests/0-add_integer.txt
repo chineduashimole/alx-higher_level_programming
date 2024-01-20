@@ -1,0 +1,72 @@
+===========================
+Using 0-add_integer.py
+===========================
+
+This module takes two arguments (integers or floats) and returns their sum
+
+How to Use
+==========
+
+Start by importing the function from the module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Adding a positive and a negative integer (a = 5 and b = -3)
+	>>> add_integer(5, -3)
+	2
+
+Adding two positive integers (a = 2 and b = 3)
+	>>> add_integer(2, 3)
+	5
+
+Adding one positive float and one positive integer (a = 3.5 and b = 3)
+	>>> add_integer(3.5, 3)
+	6
+
+Adding one positive float and one negative integer (a = -2.5 and b = 12)
+	>>> add_integer(-2.5, 12)
+	10
+
+Adding two negative floats (a = -12.5 and b = -2)
+	>>> add_integer(-12.5, -2)
+	-14
+
+Non-Numbers
+===========
+
+Adding an integer number and a string (a = 5 and b = "Books")
+	>>> add_integer(5, "Books")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Adding a string and an integer number (a = "Books" and b = 5)
+	>>> add_integer("Books", 5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Passing no argument to the function
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Adding two non-integers or non-floats
+	>>> add_integer("wake", "up")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Adding infinity
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(3, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+Adding NaN numbers
+	>>> add_integer(5, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer

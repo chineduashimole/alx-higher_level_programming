@@ -3,6 +3,7 @@
 This module defines the function usedd in matrix division
 """
 
+
 def matrix_divided(matrix, div):
     """This function helps divides all elements of a matrix by a given number
 

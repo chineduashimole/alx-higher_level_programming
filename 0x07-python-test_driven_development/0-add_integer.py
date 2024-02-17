@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Defines the addition function of an integer 
+Defines the addition function of an integer
 """
+
 
 def add_integer(a, b=98):
     """Return the sum of two integers a and b. Before addition is performed,
